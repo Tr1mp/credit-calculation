@@ -1,0 +1,356 @@
+{
+    "assessingClient": [
+        {
+            "id": 0,
+            "question": "Выберите Ваш пол",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Ваш пол--"
+                },
+                {
+                    "value": 0,
+                    "name": "Мужской"
+                },
+                {
+                    "value": 2,
+                    "name": "Женский"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "question": "Укажите Ваш возраст",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 22",
+                "ratio": 0.4,
+                "min": 20,
+                "max": 55,
+                "minRatio": 0,
+                "maxRatio": 0
+            }
+        },
+        {
+            "id": 2,
+            "question": "Выберите Ваш брачный статус",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Брачный статус--"
+                },
+                {
+                    "value": 0.5,
+                    "name": "В браке не состоял(а)"
+                },
+                {
+                    "value": 1,
+                    "name": "В браке"
+                },
+                {
+                    "value": 0,
+                    "name": "разведен(а), живет отдельно "
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "question": "Сколько у Вас детей?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Количество детей--"
+                },
+                {
+                    "value": 0,
+                    "name": "Ниодного"
+                },
+                {
+                    "value": 1,
+                    "name": "Один ребенок"
+                },
+                {
+                    "value": 1,
+                    "name": "Двое детей"
+                },
+                {
+                    "value": 1.5,
+                    "name": "Трое и больше"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "question": "Где Вы проживаете?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Место проживания--"
+                },
+                {
+                    "value": 0,
+                    "name": "С родственниками"
+                },
+                {
+                    "value": 1,
+                    "name": "Наниматель"
+                },
+                {
+                    "value": 1.5,
+                    "name": "В собственном жилье"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "question": "Введите кол-во полных лет проживания по последнему адресу?",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 5",
+                "ratio": 0.8,
+                "min": 0,
+                "max": 4,
+                "minRatio": 0,
+                "maxRatio": 3.5
+            }
+        },
+        {
+            "id": 6,
+            "question": "Какой уровень Вашего образования?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Образование--"
+                },
+                {
+                    "value": 0,
+                    "name": "Среднее"
+                },
+                {
+                    "value": 0.5,
+                    "name": "Среднее специальное"
+                },
+                {
+                    "value": 1,
+                    "name": "Высшее"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "question": "Какая Ваша занятость?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Занятость--"
+                },
+                {
+                    "value": 1,
+                    "name": "Постоянная"
+                },
+                {
+                    "value": 0.5,
+                    "name": "Переодическая"
+                },
+                {
+                    "value": 0,
+                    "name": "Временная"
+                }
+            ],
+            "checkQuestion": true
+        },
+        {
+            "id": 8,
+            "question": "Какая сфера деятельности компании?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Сфера--"
+                },
+                {
+                    "value": 0.5,
+                    "name": "Производство"
+                },
+                {
+                    "value": 1.5,
+                    "name": "Транспорт"
+                },
+                {
+                    "value": 2,
+                    "name": "Добыча полезных ископаемых"
+                },
+                {
+                    "value": 2,
+                    "name": "Связь, торговля, услуги"
+                },
+                {
+                    "value": 3,
+                    "name": "Финансы"
+                },
+                {
+                    "value": 0,
+                    "name": "Иное"
+                }
+            ],
+            "changeQuestion": true
+        },
+        {
+            "id": 9,
+            "question": "Какой Ваш статус работы?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Статус работы--"
+                },
+                {
+                    "value": 0,
+                    "name": "Неполная ставка "
+                },
+                {
+                    "value": 1,
+                    "name": "Полная ставка "
+                }
+            ],
+            "changeQuestion": true
+        },
+        {
+            "id": 10,
+            "question": "Какой стаж на последнем месте работы?",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 2",
+                "ratio": 0.7,
+                "min": 0,
+                "max": 4,
+                "minRatio": 0,
+                "maxRatio": 3
+            },
+            "changeQuestion": true
+        },
+        {
+            "id": 11,
+            "question": "Имеются ли у Вас подчинённые?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Сотрудники в подчинении--"
+                },
+                {
+                    "value": 0,
+                    "name": "Нет подчинённых"
+                },
+                {
+                    "value": 1,
+                    "name": "Есть подчинённые"
+                }
+            ],
+            "changeQuestion": true
+        },
+        {
+            "id": 12,
+            "question": "Сколько лет назад Вы погасили последний раз кредит?",
+            "clarification": "Если не брали кредиты, не погасили, или ещё выплачиваете укажите: \"0\"",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 2",
+                "ratio": 1,
+                "min": 0,
+                "max": 2,
+                "minRatio": 0,
+                "maxRatio": 3
+            }
+        },
+        {
+            "id": 13,
+            "question": "Сколько просрочек по кредиту у Вас было?",
+            "clarification": "Если не было просрочек укажите \"0\"",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 1",
+                "ratio": -2,
+                "min": 0,
+                "max": 20,
+                "minRatio": 0,
+                "maxRatio": 100
+            }
+        },
+        {
+            "id": 14,
+            "question": "Имеются ли у Вас судимости?",
+            "type": "select",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Судимости--"
+                },
+                {
+                    "value": -20,
+                    "name": "Да"
+                },
+                {
+                    "value": 0,
+                    "name": "Нет"
+                }
+            ]
+        }
+    ],
+    "financialsClient": [
+        {
+            "id": 0,
+            "question": "Сколько лиц Вы содержите?",
+            "clarification": "Дети, иждивенцы, пожилые, инвалиды. Если таких нет укажите \"0\"",
+            "type": "input",
+            "action": "multiply",
+            "answers": {
+                "placeholder": "Например: 1"
+            }
+        },
+        {
+            "id": 1,
+            "question": "Какая Ваша средняя зарплата в рублях за последние 6 месяцев?",
+            "clarification": "Только доход с официального места работы.",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 32500"
+            }
+        },
+        {
+            "id": 2,
+            "question": "Какая годовая сумма в рублях прочих регулярных доходов?",
+            "clarification": "Любые иные виды дохода, которые могут пойти на погашение кредита.",
+            "type": "input",
+            "division": "12",
+            "action": "division",
+            "answers": {
+                "placeholder": "Например: 190000"
+            }
+        },
+        {
+            "id": 3,
+            "question": "Какая у Вас ежемесечная плата за квариру?",
+            "clarification": "Аренда, комунальные платежи.",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 12000"
+            }
+        },
+        {
+            "id": 4,
+            "question": "Какая средняя сумма прочих расходов за 3 месяца?",
+            "clarification": "Учёба, страхование, кредиты(ипотека), алименты и тд.",
+            "type": "input",
+            "answers": {
+                "placeholder": "Например: 5000"
+            }
+        }
+    ]
+}
