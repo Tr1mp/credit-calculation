@@ -6,24 +6,34 @@ import {
 } from "@reduxjs/toolkit";
 import { useHttp } from '../../hooks/http.hook';
 
-const questionAdapter = createEntityAdapter();
+const questionAdapter = createEntityAdapter({
+    selectId: questions => questions.id
+});
 
 const initialState = questionAdapter.getInitialState({
     questionLoadingStatus: "idle",
-    questionNumber: 14,
+    questionNumber: 0,
     total: 0
 });
 
 export const fetchQuestion = createAsyncThunk(
-    'assessingClient/fetchQuestion',
+    'questions/fetchQuestion',
     async () => {
         const {request} = useHttp();
-        return await request("http://localhost:3001/assessingClient");
+        return await request("http://localhost:3001/questions");
     }
 )
 
-const assessingClientSlice = createSlice({
-    name: "assessingClient",
+export const fetchAnswer = createAsyncThunk(
+    'questions/fetchQuestion',
+    async (body) => {
+        const {request} = useHttp();
+        return await request("http://localhost:3001/questions", "UPDATE", body);
+    }
+)
+
+const questionsSlice = createSlice({
+    name: "questions",
     initialState,
     reducers: {
         questionNumberChange: (state) => {state.questionNumber = state.questionNumber + 1},
@@ -36,20 +46,28 @@ const assessingClientSlice = createSlice({
             })
             .addCase(fetchQuestion.fulfilled, (state, action) => {
                 state.questionLoadingStatus = "idle"
-                questionAdapter.setAll(state, action.payload);
+                questionAdapter.addMany(state, action.payload);
             })
             .addCase(fetchQuestion.rejected, state => {
                 state.questionLoadingStatus = "error"
             })
+            
+            // .addCase(fetchAnswer.fulfilled, (state) => {
+            //     state.questionLoadingStatus = "idle"
+            //     questionAdapter.setAll(state, action.payload);
+            // })
+            // .addCase(fetchAnswer.rejected, state => {
+            //     state.questionLoadingStatus = "error"
+            // })
             .addDefaultCase(() => {})
 
     }
 });
 
-const {actions, reducer} = assessingClientSlice;
+const {actions, reducer} = questionsSlice;
 
-const {selectAll} = questionAdapter.getSelectors(state => state.assessingClient);
-export const allQuestions = createSelector(selectAll, assessingClient => assessingClient);
+const {selectAll} = questionAdapter.getSelectors(state => state.questions);
+export const allQuestions = createSelector(selectAll, questions => questions);
 
 export default reducer;
 export const {

@@ -1,9 +1,40 @@
 {
-    "assessingClient": [
+    "questions": [
         {
-            "id": 0,
+            "id": "loanPercentage",
+            "question": "Какой кредит Вы бы хотели оформить?",
+            "type": "select",
+            "status": "calculate",
+            "assessment": "conditions",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Тип кредита--"
+                },
+                {
+                    "value": 11.9,
+                    "name": "Потребительский кредит"
+                },
+                {
+                    "value": 13.9,
+                    "name": "Автокредит"
+                },
+                {
+                    "value": 19.9,
+                    "name": "Срочный займ"
+                },
+                {
+                    "value": 9.9,
+                    "name": "Ипотека"
+                }
+            ]
+        },
+        {
+            "id": "gender",
             "question": "Выберите Ваш пол",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -20,9 +51,11 @@
             ]
         },
         {
-            "id": 1,
+            "id": "age",
             "question": "Укажите Ваш возраст",
             "type": "input",
+            "status": "point",
+            "assessment": "nature",
             "answers": {
                 "placeholder": "Например: 22",
                 "ratio": 0.4,
@@ -33,9 +66,11 @@
             }
         },
         {
-            "id": 2,
+            "id": "maritalStatus",
             "question": "Выберите Ваш брачный статус",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -56,9 +91,11 @@
             ]
         },
         {
-            "id": 3,
+            "id": "children",
             "question": "Сколько у Вас детей?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -83,9 +120,117 @@
             ]
         },
         {
-            "id": 4,
+            "id": "region",
+            "question": "В каком регионе Вы проживаете?",
+            "type": "select",
+            "status": "calculate",
+            "assessment": "capabilites",
+            "answers": [
+                {
+                    "value": "",
+                    "name": "--Регион проживания--"
+                },
+                { "value": "", "name": "-Центральный федеральный округ-"},
+                { "value": 23508, "name": "г. Москва"},
+                { "value": 17683, "name": "Московская область"},
+                { "value": 12745, "name": "Белгородская область"},
+                { "value": 14309, "name": "Брянская область"},
+                { "value": 14717, "name": "Владимирская область"},
+                { "value": 12896, "name": "Воронежская область"},
+                { "value": 13959, "name": "Ивановская область"},
+                { "value": 14565, "name": "Калужская область"},
+                { "value": 14031, "name": "Костромская область"},
+                { "value": 13200, "name": "Курская область"},
+                { "value": 12593, "name": "Липецкая область"},
+                { "value": 14110, "name": "Орловская область"},
+                { "value": 13504, "name": "Рязанская область"},
+                { "value": 14565, "name": "Смоленская область"},
+                { "value": 13309, "name": "Тамбовская область"},
+                { "value": 14565, "name": "Тверская область"},
+                { "value": 14869, "name": "Тульская область"},
+                { "value": 14263, "name": "Ярославская область"},
+                { "value": "", "name": "-Северо-Западный федеральный округ-"},
+                { "value": 18109, "name": "Республика Карелия"},
+                { "value": 18426, "name": "Республика Коми"},
+                { "value": 27707, "name": "Ненецкий авт. округ"},
+                { "value": 17600, "name": "Архангельская область"},
+                { "value": 15324, "name": "Вологодская область"},
+                { "value": 15628, "name": "Калининградская область"},
+                { "value": 15324, "name": "Ленинградская область"},
+                { "value": 24252, "name": "Мурманская область"},
+                { "value": 14869, "name": "Новгородская область"},
+                { "value": 15019, "name": "Псковская область"},
+                { "value": 15779, "name": "г. Санкт-Петербург"},
+                { "value": "", "name": "-Южный федеральный округ-"},
+                { "value": 13047, "name": "Республика Адыгея"},
+                { "value": 14110, "name": "Республика Калмыкия"},
+                { "value": 14717, "name": "Республика Крым"},
+                { "value": 14565, "name": "Краснодарский край"},
+                { "value": 14717, "name": "Астраханская область"},
+                { "value": 13047, "name": "Волгоградская область"},
+                { "value": 14263, "name": "Ростовская область"},
+                { "value": 15172, "name": "г. Севастополь"},
+                { "value": "", "name": "-Северо-Кавказский федеральный округ-"},
+                { "value": 13806, "name": "Республика Дагестан"},
+                { "value": 14263, "name": "Республика Ингушетия"},
+                { "value": 16235, "name": "Кабардино-Балкарская Республика"},
+                { "value": 13806, "name": "Карачаево-Черкесская Республика"},
+                { "value": 13655, "name": "Республика Северная Осетия - Алания"},
+                { "value": 14565, "name": "Чеченская Республика"},
+                { "value": 13655, "name": "Ставропольский край"},
+                { "value": "", "name": "-Приволжский федеральный округ-"},
+                { "value": 13200, "name": "Республика Башкортостан"},
+                { "value": 13352, "name": "Республика Марий Эл"},
+                { "value": 12896, "name": "Республика Мордовия"},
+                { "value": 12896, "name": "Республика Татарстан"},
+                { "value": 13504, "name": "Удмуртская Республика"},
+                { "value": 12896, "name": "Чувашская Республика"},
+                { "value": 13959, "name": "Пермский край"},
+                { "value": 13504, "name": "Кировская область"},
+                { "value": 14263, "name": "Нижегородская область"},
+                { "value": 13200, "name": "Оренбургская область"},
+                { "value": 12745, "name": "Пензенская область"},
+                { "value": 14263, "name": "Самарская область"},
+                { "value": 12745, "name": "Саратовская область"},
+                { "value": 13504, "name": "Ульяновская область"},
+                { "value": "", "name": "-Уральский федеральный округ-"},
+                { "value": 14263, "name": "Курганская область"},
+                { "value": 14717, "name": "Свердловская область"},
+                { "value": 20302, "name": "Ханты-Мансийский авт. округ - Югра"},
+                { "value": 21617, "name": "Ямало-Ненецкий авт. округ"},
+                { "value": 15172, "name": "Тюменская область"},
+                { "value": 14253, "name": "Челябинская область"},
+                { "value": "", "name": "-Сибирский федеральный округ-"},
+                { "value": 14263, "name": "Республика Алтай"},
+                { "value": 15324, "name": "Республика Тыва"},
+                { "value": 15476, "name": "Республика Хакасия"},
+                { "value": 13504, "name": "Алтайский край"},
+                { "value": 16841, "name": "Красноярский край"},
+                { "value": 16082, "name": "Иркутская область"},
+                { "value": 13806, "name": "Кемеровская область"},
+                { "value": 15318, "name": "Новосибирская область"},
+                { "value": 13554, "name": "Омская область"},
+                { "value": 15265, "name": "Томская область"},
+                { "value": "", "name": "-Дальневосточный федеральный округ-"},
+                { "value": 16537, "name": "Республика Бурятия"},
+                { "value": 22911, "name": "Республика Саха (Якутия)"},
+                { "value": 17751, "name": "Забайкальский край"},
+                { "value": 27493, "name": "Камчатский край"},
+                { "value": 18054, "name": "Приморский край"},
+                { "value": 20228, "name": "Хабаровский край"},
+                { "value": 17630, "name": "Амурская область"},
+                { "value": 26400, "name": "Магаданская область"},
+                { "value": 20634, "name": "Сахалинская область"},
+                { "value": 20447, "name": "Еврейская авт. область"},
+                { "value": 34593, "name": "Чукотский авт. округ"}
+            ]
+        },
+        {
+            "id": "housing",
             "question": "Где Вы проживаете?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -106,9 +251,11 @@
             ]
         },
         {
-            "id": 5,
+            "id": "yearResidence",
             "question": "Введите кол-во полных лет проживания по последнему адресу?",
             "type": "input",
+            "status": "point",
+            "assessment": "nature",
             "answers": {
                 "placeholder": "Например: 5",
                 "ratio": 0.8,
@@ -119,9 +266,11 @@
             }
         },
         {
-            "id": 6,
+            "id": "education",
             "question": "Какой уровень Вашего образования?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -142,9 +291,11 @@
             ]
         },
         {
-            "id": 7,
+            "id": "employment",
             "question": "Какая Ваша занятость?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -166,9 +317,11 @@
             "checkQuestion": true
         },
         {
-            "id": 8,
+            "id": "companyField",
             "question": "Какая сфера деятельности компании?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -202,9 +355,11 @@
             "changeQuestion": true
         },
         {
-            "id": 9,
+            "id": "jobStatus",
             "question": "Какой Ваш статус работы?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -222,9 +377,11 @@
             "changeQuestion": true
         },
         {
-            "id": 10,
+            "id": "experience",
             "question": "Какой стаж на последнем месте работы?",
             "type": "input",
+            "status": "point",
+            "assessment": "nature",
             "answers": {
                 "placeholder": "Например: 2",
                 "ratio": 0.7,
@@ -236,9 +393,11 @@
             "changeQuestion": true
         },
         {
-            "id": 11,
+            "id": "subordinates",
             "question": "Имеются ли у Вас подчинённые?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -256,10 +415,12 @@
             "changeQuestion": true
         },
         {
-            "id": 12,
+            "id": "paidLoan",
             "question": "Сколько лет назад Вы погасили последний раз кредит?",
             "clarification": "Если не брали кредиты, не погасили, или ещё выплачиваете укажите: \"0\"",
             "type": "input",
+            "status": "point",
+            "assessment": "nature",
             "answers": {
                 "placeholder": "Например: 2",
                 "ratio": 1,
@@ -270,10 +431,12 @@
             }
         },
         {
-            "id": 13,
+            "id": "delinquenciesLoan",
             "question": "Сколько просрочек по кредиту у Вас было?",
             "clarification": "Если не было просрочек укажите \"0\"",
             "type": "input",
+            "status": "point",
+            "assessment": "nature",
             "answers": {
                 "placeholder": "Например: 1",
                 "ratio": -2,
@@ -284,9 +447,11 @@
             }
         },
         {
-            "id": 14,
+            "id": "criminalRecord",
             "question": "Имеются ли у Вас судимости?",
             "type": "select",
+            "status": "point",
+            "assessment": "nature",
             "answers": [
                 {
                     "value": "",
@@ -301,55 +466,126 @@
                     "name": "Нет"
                 }
             ]
-        }
-    ],
-    "financialsClient": [
+        },
         {
-            "id": 0,
+            "id": "maintenance",
             "question": "Сколько лиц Вы содержите?",
             "clarification": "Дети, иждивенцы, пожилые, инвалиды. Если таких нет укажите \"0\"",
             "type": "input",
-            "action": "multiply",
+            "status": "calculate",
+            "assessment": "capabilites",
             "answers": {
                 "placeholder": "Например: 1"
             }
         },
         {
-            "id": 1,
+            "id": "salary",
             "question": "Какая Ваша средняя зарплата в рублях за последние 6 месяцев?",
             "clarification": "Только доход с официального места работы.",
             "type": "input",
+            "status": "calculate",
+            "assessment": "capabilites",
             "answers": {
                 "placeholder": "Например: 32500"
             }
         },
         {
-            "id": 2,
+            "id": "income",
             "question": "Какая годовая сумма в рублях прочих регулярных доходов?",
             "clarification": "Любые иные виды дохода, которые могут пойти на погашение кредита.",
             "type": "input",
-            "division": "12",
-            "action": "division",
+            "status": "calculate",
+            "assessment": "capabilites",
             "answers": {
                 "placeholder": "Например: 190000"
             }
         },
         {
-            "id": 3,
-            "question": "Какая у Вас ежемесечная плата за квариру?",
+            "id": "rent",
+            "question": "Какая у Вас ежемесячная плата за квартиру?",
             "clarification": "Аренда, комунальные платежи.",
             "type": "input",
+            "status": "calculate",
+            "assessment": "capabilites",
             "answers": {
                 "placeholder": "Например: 12000"
             }
         },
         {
-            "id": 4,
+            "id": "otherExpenses",
             "question": "Какая средняя сумма прочих расходов за 3 месяца?",
             "clarification": "Учёба, страхование, кредиты(ипотека), алименты и тд.",
             "type": "input",
+            "status": "calculate",
+            "assessment": "capabilites",
             "answers": {
                 "placeholder": "Например: 5000"
+            }
+        },
+        {
+            "id": "deposits",
+            "question": "Какая общая сумма находится у Вас на банковских вкладах?",
+            "clarification": "Если отсутсвуеют банковские вклады укажите \"0\"",
+            "type": "input",
+            "status": "calculate",
+            "assessment": "proprty",
+            "answers": {
+                "placeholder": "Например: 50 000"
+            }
+        },
+        {
+            "id": "apartament",
+            "question": "Какая кадастровую стоимость Вашей квартиры?",
+            "clarification": "Если кваритры в собственности нет (или заложена) укажите \"0\"",
+            "type": "input",
+            "status": "calculate",
+            "assessment": "proprty",
+            "answers": {
+                "placeholder": "Например: 5 490 000"
+            }
+        },
+        {
+            "id": "vehicle",
+            "question": "Какая примерная рыночная стоимость Вашего транспортного средства?",
+            "clarification": "Если т/с в собственности нет (или заложен) укажите \"0\"",
+            "type": "input",
+            "status": "calculate",
+            "assessment": "proprty",
+            "answers": {
+                "placeholder": "Например: 5 490 000"
+            }
+        },
+        {
+            "id": "initialPayment",
+            "question": "Какую сумму первоначального взноса вы планируете?",
+            "clarification": "Если первоначального взноса нет укажите \"0\"",
+            "type": "input",
+            "status": "calculate",
+            "assessment": "conditions",
+            "answers": {
+                "placeholder": "Например: 40 000"
+            }
+        },
+        {
+            "id": "loanPeriod",
+            "question": "На какой срок вы хотите взять кредит?",
+            "clarification": "Укажите срок в месяцах",
+            "type": "input",
+            "status": "calculate",
+            "assessment": "conditions",
+            "answers": {
+                "placeholder": "Например: 60"
+            }
+        },
+        {
+            "id": "loanAmount",
+            "question": "На какую сумму Вы хотите оформить кредит?",
+            "clarification": "Укажите сумму в рублях",
+            "type": "input",
+            "status": "calculate",
+            "assessment": "conditions",
+            "answers": {
+                "placeholder": "Например: 6 000 000"
             }
         }
     ]

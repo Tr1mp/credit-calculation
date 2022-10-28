@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import assessingClient from '../components/AssessingClient/assessingClientSlice';
-
+import questions from '../components/AssessingClient/assessingClientSlice';
+import answers from '../components/financialClient/financialClientSlice';
 const stringMiddleware = () => (next) => (action) => {
     if (typeof action === 'string') {
         return next({
@@ -12,7 +12,7 @@ const stringMiddleware = () => (next) => (action) => {
 };
 
 const store = configureStore({
-    reducer: {assessingClient},
+    reducer: {questions, answers},
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(stringMiddleware),
     devTools: process.env.NODE_ENV !== 'production',
 })

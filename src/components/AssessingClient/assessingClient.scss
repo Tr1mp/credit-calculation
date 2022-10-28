@@ -1,0 +1,136 @@
+@import '../../styles/variables.scss';
+
+.assessingClient {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    min-width: 250px;
+    min-height: 300px;
+
+    
+
+}
+
+.button {
+    display: flex;
+    text-align: center;
+    width: 180px;
+    height: 55px;
+    margin: 10px auto 10px;
+    perspective: 1000px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    div {
+        font-size: 19px;
+        letter-spacing: 1px;
+        transform-style: preserve-3d;
+        transition: all .25s;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    div:before,
+    div:after {
+        position: absolute;
+        content: "Далее";
+        height: 55px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid $blue;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    div:before {
+        color: #86EDB3;
+        background: $blue;
+        transform: rotateY(0deg) translateZ(25px);
+    }
+
+    div:after {
+        color: rgb(0, 0, 0);
+        transform: rotateX(90deg) translateZ(25px);
+    }
+
+    &:hover, &:focus {      
+        div {
+            transform: translateZ(-25px) rotateX(-90deg);
+            margin-top: 28px;
+        }
+    }
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.form {
+    display: flex;
+    margin: 25px auto;
+    // position: relative;
+    max-width: 400px;
+    
+    &-arrow {
+        position: relative;
+        right: 32px;
+        top: 14px;
+        width: 28px;
+        height: 14px;
+        stroke-width: 3px;
+        stroke: $main-color;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        pointer-events: none;
+    }
+
+    &_data {
+        outline: none;
+        -webkit-appearance: none;
+        width: 100%;
+        padding: 7px;
+        border: 1px solid #E8EAED;
+        border-radius: 5px;
+        background: $white;
+        box-shadow: 0 1px 3px -2px #9098A9;
+        font-family: inherit;
+        font-size: 22px;
+        transition: all 150ms ease;
+        text-align: center;
+
+        &:hover, &:focus, .form-data:hover select {
+            border-color: $dark-blue;
+            box-shadow: 0 0 0 2px rgba($dark-blue, .2);
+        }
+
+        &:required:invalid {
+            color: $grey;
+        }
+    } 
+
+    select { 
+        padding: 7px 40px 7px 7px;
+        cursor: pointer;
+
+    }
+
+    
+
+    option {
+        color: #000000;
+        &:disabled {
+            color:#fff;
+            background-color: #cccccc;
+            text-align: left;
+        }
+    }
+    
+}

@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.congratulation {
+    font-size: 40px;
+    color: rgb(187, 65, 65);
+}
+
+.result {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.description {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px solid $white;
+    border-radius: 20px;
+    padding: 5px 15px;
+
+    &-item {
+        min-width: 140px;
+    }
+
+    &-label {
+        margin: 20px 20px -10px 20px;
+        text-align: start;
+    }
+}

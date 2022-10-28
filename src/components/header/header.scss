@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    height: 50px;
+    border-bottom: solid 2px;
+    
+    &-img {
+        min-width: 80px;
+        max-height: 50px;
+        max-width: 150px;
+    }
+
+    a {
+        color: $white;
+        font-size: 26px;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+
+   
+}

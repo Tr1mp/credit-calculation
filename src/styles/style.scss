@@ -1,0 +1,88 @@
+@import './variables.scss';
+
+body {
+    background-color: $main-color;
+}
+
+ul,
+li,
+dl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    // justify-content: center;
+    // text-align: center;
+    margin: 15px auto 10px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 40px;
+    color: $white;
+}
+
+h3 {
+    // justify-content: center;
+    // text-align: center;
+    margin: 10px auto;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    color: $white;
+
+}
+
+h4 {
+    // justify-content: center;
+    // text-align: center;
+    margin: 10px auto;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 32px;
+    color: $white;
+    span {
+        font-size: 32px;
+    }
+}
+
+p {
+    margin: 10px;
+    font-size: 16px;
+    color: $white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+span {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: $dark-blue;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
