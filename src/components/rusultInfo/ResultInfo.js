@@ -67,7 +67,7 @@ const ResultInfo = ({loanCollateral, arrProprty}) => {
         {
             text: 'Переплата', 
             units: '\u20bd', 
-            value: thousand(mounthlyPayment * loanPeriod.value - loanAmount.value)
+            value: thousand(mounthlyPayment * loanPeriod.value - loanAmount.value + initialPayment.value)
         },
         {
             text: 'Залог', 
@@ -112,7 +112,7 @@ const View = ({data}) => {
             return (
                 <div key={item.text} className="description-item">
                     <p>{item.text}</p>
-                    <h4><span>{item.value}</span>{item.units}</h4>
+                    <h4><span>{item.value ? item.value : "Отсутсвует"}</span>{item.units}</h4>
                 </div>
             )
         })
