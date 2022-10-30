@@ -20,21 +20,29 @@ const initialState = answersAdapter.getInitialState({
 });
 
 export const fetchAnswers = createAsyncThunk(
-    'answers/fetchQuestion',
-    async (id) => {
-        const {request} = useHttp();
-        return await request(`http://localhost:3002/usersAnswer/${id}`);
-    }
+    // 'answers/fetchQuestion',
+    // async (id) => {
+    //     const {request} = useHttp();
+    //     return await request(`https://loan-data-base.herokuapp.com/usersAnswer/${id}`);
+    // }
 )
 
-const pid = localStorage.getItem("id");
+export const sendAnswers = createAsyncThunk(
+    'answers/sendAnswers',
+    async (answers) => {
+        const {request} = useHttp();
+        console.log(answers);
+        console.log(JSON.stringify(answers));
+        return await request(`https://loan-data-base.herokuapp.com/usersAnswer/${answers.id}`, "PATCH", JSON.stringify(answers));
+    }
+)
 
 const answerSlice = createSlice({
     name: "answers",
     initialState,
     reducers: {
         updateOneAnswer: (state, action) => {answersAdapter.upsertOne(state, action.payload)},
-        addOneAnswer: (state, action) => {answersAdapter.addOne(state, action.payload)},
+        addIdToAnswer: (state, action) => {state.entities.id = action.payload},
         // addManyAnswer: (state, action) => {answersAdapter.addMany(state, action.payload)},
         capabilitiesChange: (state, action) => {state.capabilities = action.payload},
         securingLoanChange: (state, action) => {state.securingLoan = action.payload},
@@ -56,16 +64,19 @@ const answerSlice = createSlice({
             .addCase(fetchAnswers.rejected, state => {
                 // state.questionLoadingStatus = "error"
             })
-            // .addCase(fetchAnswer.pending, state => {
-            //     state.questionLoadingStatus = "loading"
-            // })
-            // .addCase(fetchAnswer.fulfilled, (state) => {
-            //     state.questionLoadingStatus = "idle"
-                // questionAdapter.setAll(state, action.payload);
-            // })
-            // .addCase(fetchAnswer.rejected, state => {
-            //     state.questionLoadingStatus = "error"
-            // })
+            .addCase(sendAnswers.pending, state => {
+                console.log("sendAnswers loading");
+                // state.questionLoadingStatus = "loading"
+            })
+            .addCase(sendAnswers.fulfilled, (state, action) => {
+                // state.questionLoadingStatus = "idle"
+                console.log("sendAnswers good");
+                // answersAdapter.setAll(state, action.payload);
+            })
+            .addCase(sendAnswers.rejected, state => {
+                console.log("sendAnswers bad");
+                // state.questionLoadingStatus = "error"
+            })
             .addDefaultCase(() => {})
 
     }
@@ -81,7 +92,7 @@ export const allEntities = createSelector(selectEntities, answers => answers);
 
 export default reducer;
 export const {
-    addOneAnswer,
+    addIdToAnswer,
     updateOneAnswer,
     addManyAnswer,
     capabilitiesChange,

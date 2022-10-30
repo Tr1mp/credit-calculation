@@ -132,7 +132,7 @@ const View = ({data}) => {
     if (total > 55) {
         return (
             <div>
-                <h2>{total}</h2>
+                {/* <h2>{total}</h2> */}
                 <h2 className="congratulation">Поздравляем!</h2>
                 <h2>
                     Вам одобрен(а) <span>{loanPercentage}</span>
@@ -144,15 +144,17 @@ const View = ({data}) => {
     } else {
         return (
             <div>
-                <h2>{total}</h2>
+                {/* <h2>{total}</h2> */}
+                <h2 className="congratulation">Не печалься!</h2>
                 <h2>
-                    Вам не одобрен(a) <span>{loanPercentage}</span> на сумму <span>{loanAmount}</span> рублей
+                    Вам не одобрен(a) <span>{loanPercentage}</span>
                 </h2>
+                <h2>
+                    на сумму <span>{loanAmount}</span> рублей
+                </h2>
+                
                 <h3>
                     На срок: <span>{loanPeriod}</span> месяцев.
-                </h3>
-                <h3>
-                    Общая сумма выплат: <span>{sum}</span> рублей
                 </h3>
             </div>
         );

@@ -20,7 +20,7 @@ export const fetchQuestion = createAsyncThunk(
     'questions/fetchQuestion',
     async () => {
         const {request} = useHttp();
-        return await request("http://localhost:3001/questions");
+        return await request("https://loan-data-base.herokuapp.com/questions");
     }
 )
 
@@ -28,7 +28,7 @@ export const fetchAnswer = createAsyncThunk(
     'questions/fetchQuestion',
     async (body) => {
         const {request} = useHttp();
-        return await request("http://localhost:3001/questions", "UPDATE", body);
+        return await request("https://loan-data-base.herokuapp.com/questions", "UPDATE", body);
     }
 )
 

@@ -7,6 +7,7 @@ import ResultInfo from "../rusultInfo/ResultInfo";
 
 
 import {
+    sendAnswers,
     allAnswers,
     allEntities,
     // fetchAnswers,
@@ -51,6 +52,7 @@ const FinancialClient = () => {
     useEffect(() => {
         const id = localStorage.getItem("id");
         console.log("id", id)
+        dispatch(sendAnswers(answers))
         // request(`http://localhost:3002/usersAnswer/${id}`)
             // dispatch(fetchAnswers(id))
             // .catch(console.log)
@@ -135,25 +137,31 @@ const FinancialClient = () => {
         dispatch(proprtyChange(sufficiencyProprtyPoint > 5 ? 5 : sufficiencyProprtyPoint));
     }
     
-    const calculateSecuringLoan = ({loanPeriod, loanPercentage, loanAmount, initialPayment}, arrProprty) => {
+    const calculateSecuringLoan = ({loanPeriod, loanAmount, initialPayment}, arrProprty) => {
         
         const newArrProprty = arrProprty.map(item => item.value);
         console.log("newArrProprty", newArrProprty);
 
         const totalLoan = mounthlyPayment * loanPeriod.value;
 
-        const loanCollateral = Math.min(...newArrProprty.filter(item => item + initialPayment.value > totalLoan));
+        const loanCollateral = Math.min(...newArrProprty.filter(item => item + initialPayment.value > loanAmount));
         
         setLoanCollateral(loanCollateral);
-        console.log("Deposit", loanCollateral);
+        console.log("loanCollateral", loanCollateral);
 
         // const securityRatio = loanCollateral * (1 - 0.2) / loanAmount.value * (1 + 2 * loanPercentage.value / 12);
         const securityRatio = loanCollateral * 0.8 / totalLoan;
         console.log("securityRatio", securityRatio);
-        const securityRatioPoint = alignmentValues(10 * (securityRatio))
+        let securityRatioPoint = alignmentValues(10 * (securityRatio))
         console.log("securityRatioPoint", securityRatioPoint);
+        
+        if (securityRatioPoint < 6 || (loanCollateral === Infinity && totalLoan > 1000000)) {
+            securityRatioPoint = -500;
+        } else if (securityRatioPoint > 25) {
+            securityRatioPoint = 25;
+        }
 
-        dispatch(securingLoanChange(securityRatioPoint > 25 ? 25 : securityRatioPoint > 6 ? securityRatioPoint : -500));
+        dispatch(securingLoanChange(securityRatioPoint));
     }
 
     const calculateConditionalLoan = ({initialPayment, loanPeriod, loanAmount, loanPercentage}) => {

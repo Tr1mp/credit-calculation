@@ -612,6 +612,731 @@
     },
     {
       "id": "MBXXrFX"
+    },
+    {
+      "2119d2e7-b96b-464b-989a-5512c774a708": {
+        "id": "2119d2e7-b96b-464b-989a-5512c774a708"
+      },
+      "loanPercentage": {
+        "id": [
+          "loanPercentage"
+        ],
+        "name": "Потребительский кредит",
+        "value": 11.9,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "gender": {
+        "id": [
+          "gender"
+        ],
+        "name": "Мужской",
+        "value": 0,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "age": {
+        "id": [
+          "age"
+        ],
+        "name": "age",
+        "value": 8.8,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "maritalStatus": {
+        "id": [
+          "maritalStatus"
+        ],
+        "name": "В браке",
+        "value": 1,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "children": {
+        "id": [
+          "children"
+        ],
+        "name": "Один ребенок",
+        "value": 1,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "region": {
+        "id": [
+          "region"
+        ],
+        "name": "г. Москва",
+        "value": 23508,
+        "status": "calculate",
+        "assessment": "capabilites"
+      },
+      "housing": {
+        "id": [
+          "housing"
+        ],
+        "name": "Наниматель",
+        "value": 1,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "yearResidence": {
+        "id": [
+          "yearResidence"
+        ],
+        "name": "yearResidence",
+        "value": 3.5,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "education": {
+        "id": [
+          "education"
+        ],
+        "name": "Среднее",
+        "value": 0,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "employment": {
+        "id": [
+          "employment"
+        ],
+        "name": "Постоянная",
+        "value": 1,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "companyField": {
+        "id": [
+          "companyField"
+        ],
+        "name": "Транспорт",
+        "value": 1.5,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "jobStatus": {
+        "id": [
+          "jobStatus"
+        ],
+        "name": "Полная ставка ",
+        "value": 1,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "experience": {
+        "id": [
+          "experience"
+        ],
+        "name": "experience",
+        "value": 1.4,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "subordinates": {
+        "id": [
+          "subordinates"
+        ],
+        "name": "Есть подчинённые",
+        "value": 1,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "paidLoan": {
+        "id": [
+          "paidLoan"
+        ],
+        "name": "paidLoan",
+        "value": 0,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "delinquenciesLoan": {
+        "id": [
+          "delinquenciesLoan"
+        ],
+        "name": "delinquenciesLoan",
+        "value": -4,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "criminalRecord": {
+        "id": [
+          "criminalRecord"
+        ],
+        "name": "Нет",
+        "value": 0,
+        "status": "point",
+        "assessment": "nature"
+      },
+      "maintenance": {
+        "id": [
+          "maintenance"
+        ],
+        "name": "maintenance",
+        "value": 2,
+        "status": "calculate",
+        "assessment": "capabilites"
+      },
+      "salary": {
+        "id": [
+          "salary"
+        ],
+        "name": "salary",
+        "value": 50000,
+        "status": "calculate",
+        "assessment": "capabilites"
+      },
+      "income": {
+        "id": [
+          "income"
+        ],
+        "name": "income",
+        "value": 190000,
+        "status": "calculate",
+        "assessment": "capabilites"
+      },
+      "rent": {
+        "id": [
+          "rent"
+        ],
+        "name": "rent",
+        "value": 12000,
+        "status": "calculate",
+        "assessment": "capabilites"
+      },
+      "otherExpenses": {
+        "id": [
+          "otherExpenses"
+        ],
+        "name": "otherExpenses",
+        "value": 7000,
+        "status": "calculate",
+        "assessment": "capabilites"
+      },
+      "deposits": {
+        "id": [
+          "deposits"
+        ],
+        "name": "deposits",
+        "value": 50000,
+        "status": "calculate",
+        "assessment": "proprty"
+      },
+      "apartament": {
+        "id": [
+          "apartament"
+        ],
+        "name": "apartament",
+        "value": 6000000,
+        "status": "calculate",
+        "assessment": "proprty"
+      },
+      "vehicle": {
+        "id": [
+          "vehicle"
+        ],
+        "name": "vehicle",
+        "value": 200000,
+        "status": "calculate",
+        "assessment": "proprty"
+      },
+      "initialPayment": {
+        "id": [
+          "initialPayment"
+        ],
+        "name": "initialPayment",
+        "value": 40000,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": [
+          "loanPeriod"
+        ],
+        "name": "loanPeriod",
+        "value": 80,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "mMjkg3z"
+    },
+    {
+      "2119d2e7-b96b-464b-989a-5512c774a708": {
+        "id": "2119d2e7-b96b-464b-989a-5512c774a708"
+      },
+      "initialPayment": {
+        "id": [
+          "initialPayment"
+        ],
+        "name": "initialPayment",
+        "value": 40000,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": [
+          "loanPeriod"
+        ],
+        "name": "loanPeriod",
+        "value": 60,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "cR1d1GO"
+    },
+    {
+      "2119d2e7-b96b-464b-989a-5512c774a708": {
+        "id": "2119d2e7-b96b-464b-989a-5512c774a708"
+      },
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 40000,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 20,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "sRw7WAF"
+    },
+    {
+      "e089f06c-595d-4522-af30-88f2c654be00": {
+        "id": "e089f06c-595d-4522-af30-88f2c654be00"
+      },
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 40000,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 20,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "gGi49Hz"
+    },
+    {
+      "undefined": {
+        "c4ed1c97-6450-413b-96db-98d2b026de4d": "c4ed1c97-6450-413b-96db-98d2b026de4d"
+      },
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 10000,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 400,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "w_9IR9L"
+    },
+    {
+      "[object Object]": {
+        "id": {
+          "id": "5aab3e2b-029b-45d0-b064-ed80bca05b2f"
+        }
+      },
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 40000,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 12,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "-VG4nxO"
+    },
+    {
+      "2508cd1e-70f0-44de-aa27-daac0fe2cbdb": {
+        "id": "2508cd1e-70f0-44de-aa27-daac0fe2cbdb"
+      },
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 1222,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 122,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "ZrakPNO"
+    },
+    {
+      "undefined": "4efcf73c-6c51-4332-9452-fc5b463895fc",
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 2122,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 12,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "5b5jnJk"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": null,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 1232,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "NBDwN-_"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 12211,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 21,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "zwV2vnj"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 123123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 12,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "05oDmAP"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 2122,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 22,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "rC2Wtvh"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 4546,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 60,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "cLee1OX"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 1222,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 12,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "cemmZH0"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 12312,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 123123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "diElfPd"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 345,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 345,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "fuZooxf"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 345,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 3456,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "Wo_qcbG"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "Wu7ViR_"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 12312,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 1231231,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "PzdIuC8"
+    },
+    {
+      "id": "O81kuT3"
+    },
+    {
+      "id": "pTWKUeu"
+    },
+    {
+      "id": "50_DT9n"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 21321,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "hDoOdPt"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "FsE52Mh"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 213,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "3m9vR4F"
+    },
+    {
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 123,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "id": "123"
+    },
+    {
+      "requestId": "VT954BWpw6DjPtN3qTZae",
+      "signal": {},
+      "id": {
+        "initialPayment": {
+          "id": "initialPayment",
+          "name": "initialPayment",
+          "value": 123,
+          "status": "calculate",
+          "assessment": "conditions"
+        },
+        "loanPeriod": {
+          "id": "loanPeriod",
+          "name": "loanPeriod",
+          "value": 123,
+          "status": "calculate",
+          "assessment": "conditions"
+        }
+      }
+    },
+    {
+      "id": "564",
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 1231231,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 12321323,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanAmount": {
+        "id": "loanAmount",
+        "name": "loanAmount",
+        "value": 12312323,
+        "status": "calculate",
+        "assessment": "conditions"
+      }
+    },
+    {
+      "id": "302b0f6a-acdf-4079-b9d4-903ee56794de",
+      "initialPayment": {
+        "id": "initialPayment",
+        "name": "initialPayment",
+        "value": 234325,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanPeriod": {
+        "id": "loanPeriod",
+        "name": "loanPeriod",
+        "value": 25345,
+        "status": "calculate",
+        "assessment": "conditions"
+      },
+      "loanAmount": {
+        "id": "loanAmount",
+        "name": "loanAmount",
+        "value": 435345,
+        "status": "calculate",
+        "assessment": "conditions"
+      }
     }
   ]
 }

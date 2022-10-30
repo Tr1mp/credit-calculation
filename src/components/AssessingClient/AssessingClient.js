@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useHttp } from "../../hooks/http.hook";
 import { thousand } from "../../hooks/numberMusk";
 
-import { updateOneAnswer, addOneAnswer } from "../financialClient/financialClientSlice";
+import { updateOneAnswer, addIdToAnswer, sendAnswers, allEntities } from "../financialClient/financialClientSlice";
 import { fetchQuestion, allQuestions, questionNumberChange, totalChange } from "./assessingClientSlice";
 
 
@@ -54,7 +54,6 @@ const AsssesingClient = () => {
     useEffect(() => {
         dispatch(fetchQuestion());
     }, [])
-
     useEffect(() => {
         getData();
     }, [])
@@ -62,13 +61,13 @@ const AsssesingClient = () => {
     const getData = () => {
         if (localStorage.getItem("id")) {
             const id = localStorage.getItem("id");
-            dispatch(addOneAnswer({id}))
+            dispatch(addIdToAnswer(id))
             return
         }
         const id = uuidv4();
         localStorage.setItem("id", id)
-        dispatch(addOneAnswer({id}))
-        // request(`http://localhost:3002/usersAnswer/`, "POST", JSON.stringify({ id: id }))
+        dispatch(addIdToAnswer(id))
+        request(`https://loan-data-base.herokuapp.com/usersAnswer`, "POST", JSON.stringify({ id: id }))
     }
 
     useEffect(() => {
@@ -148,7 +147,7 @@ const AsssesingClient = () => {
             : id
 
         const answer = {
-                id: [id],
+                id,
                 name: answerValue,
                 value: value,
                 status,
@@ -163,6 +162,7 @@ const AsssesingClient = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        e.target[1].blur()
         const question = questions[questionNumber];
         const value = onChangeValue(e.target[0].value, question)
 
@@ -176,6 +176,7 @@ const AsssesingClient = () => {
         }
 
         changeQuestion();
+
         console.log(+value.toFixed(2));
     }
 
@@ -193,7 +194,7 @@ const AsssesingClient = () => {
                     <h3>{questions[questionNumber].clarification}</h3>
                     {answers}
                     <div>
-                        <button className="button" type="submit"><div></div></button>
+                        <button className="button" type="submit"><div className="inner"></div></button>
                     </div>
                 </form>
                 : null

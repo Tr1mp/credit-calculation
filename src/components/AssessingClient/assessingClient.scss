@@ -25,7 +25,7 @@
     border: none;
     cursor: pointer;
 
-    div {
+    .inner {
         font-size: 19px;
         letter-spacing: 1px;
         transform-style: preserve-3d;
@@ -33,8 +33,8 @@
         font-family: 'Montserrat', sans-serif;
     }
 
-    div:before,
-    div:after {
+    .inner:before,
+    .inner:after {
         position: absolute;
         content: "Далее";
         height: 55px;
@@ -47,29 +47,23 @@
         border-radius: 5px;
     }
 
-    div:before {
+    .inner:before {
         color: #86EDB3;
         background: $blue;
         transform: rotateY(0deg) translateZ(25px);
     }
 
-    div:after {
+    .inner:after {
         color: rgb(0, 0, 0);
         transform: rotateX(90deg) translateZ(25px);
     }
 
     &:hover, &:focus {      
-        div {
+        .inner {
             transform: translateZ(-25px) rotateX(-90deg);
             margin-top: 28px;
         }
     }
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
 
 .form {
